@@ -16,12 +16,13 @@ This document outlines the base requirements for Project 2.
 1 - Organize golfing event at (Harvard Gulch Golf Course)
 2 - Facilitate event utilizing APP
 - Keep Score
-- Document ball placement utilizing Golfbert API
-  a - Longest drive
-  b - Closest to the pin
-  c - Longest putt
+- Document ball placement utilizing Golfbert API (Nice to have!)
+- Longest drive
+- Closest to the pin
+- Longest putt
 3 - Dispersing $$$ to charity orgs via Panda Pay API
-  - uses Charity TAX ID
+  - Uses Charity TAX ID
+  - Customizable payout schedule based on event planners feature page
 
 ### Nice to haves
 * More OAUTH options
