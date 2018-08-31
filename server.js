@@ -3,6 +3,10 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 
+// BWW START
+var fs = require('fs');
+// BWW END
+
 var db = require("./models");
 
 var app = express();

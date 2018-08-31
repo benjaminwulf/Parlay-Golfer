@@ -1,4 +1,7 @@
 var db = require("../models");
+// BWW START
+var fs = require('fs');
+// BWW END
 
 module.exports = function(app) {
   // Load index page
@@ -19,6 +22,37 @@ module.exports = function(app) {
       });
     });
   });
+  
+  // BWW START
+  // Load example page and pass in an example by id
+  var myCourse = {
+    id: 6127,
+    text: 'Harvard Gulch Golf Course',
+    description: 'This is a par 3 golf course in Denver, Colorado!',
+    courses: [
+      {
+        id: 6127,
+        text: 'Harvard Gulch Golf Course',
+        description: '660 E Iliff Ave, Denver, CO 80210 (303) 698 4078'
+      },
+      {
+        id: 6213,
+        text: 'Deer Creek Golf Club at Meadow Ranch',
+        description: '8135 Shaffer Pkwy, Littleton, CO 80127 (303) 978 1800'
+      }
+    ]
+  }
+  app.get("/course/:id", function(req, res) {
+    res.render('course', {
+      course: myCourse
+    });
+    // db.Example.findOne({ where: { id: req.params.id } }).then(function(dbCourse) {
+    //   res.render("course", {
+    //     example: dbCourse
+    //   });
+    // });
+  });
+  // BWW END
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
