@@ -16,6 +16,7 @@ This document outlines the base requirements for Project 2.
 * Organize golfing event at (Harvard Gulch Golf Course)
 * Facilitate event utilizing APP
 * Keep Score
+* Realtime score updates
 * Document ball placement utilizing Golfbert API (Nice to have!)
 - Longest drive
 - Closest to the pin
