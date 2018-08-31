@@ -13,14 +13,14 @@ This document outlines the base requirements for Project 2.
 
 * The purpose is to run charity golfing events and distribute 
 * People will participate solo, two-person teams, or foursomes representing a charity and/or non-profit
-1 - Organize golfing event at (Harvard Gulch Golf Course)
-2 - Facilitate event utilizing APP
-- Keep Score
-- Document ball placement utilizing Golfbert API (Nice to have!)
+* Organize golfing event at (Harvard Gulch Golf Course)
+* Facilitate event utilizing APP
+* Keep Score
+* Document ball placement utilizing Golfbert API (Nice to have!)
 - Longest drive
 - Closest to the pin
 - Longest putt
-3 - Dispersing $$$ to charity orgs via Panda Pay API
+* Dispersing $$$ to charity orgs via Panda Pay API
   - Uses Charity TAX ID
   - Customizable payout schedule based on event planners feature page
 
