@@ -52,7 +52,6 @@ module.exports = function(app) {
     //   });
     // });
   });
-  // BWW END
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
