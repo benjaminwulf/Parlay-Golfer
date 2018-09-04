@@ -68,5 +68,5 @@ typings/
 .next
 
 # from easy-node-authentication 
-config/database.js
+#config/database.js
 config/auth.js
