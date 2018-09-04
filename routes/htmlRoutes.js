@@ -58,3 +58,9 @@ module.exports = function(app) {
     res.render("404");
   });
 };
+
+//===========================
+// This is how to use one templating language or another
+// forces usage of the respective render engine by setting the file extension explicitly.
+// res.render( 'about.ejs', { title: 'About' } );
+// res.render( 'about.handlebars', { title: 'About' } );

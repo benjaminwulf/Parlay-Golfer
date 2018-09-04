@@ -1,6 +1,13 @@
 # Logs
 logs
+results
+lib-cov
 *.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -59,3 +66,7 @@ typings/
 
 # next.js build output
 .next
+
+# from easy-node-authentication 
+config/database.js
+config/auth.js
