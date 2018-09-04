@@ -52,10 +52,15 @@ module.exports = function(app) {
     //   });
     // });
   });
-  // BWW END
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
   });
 };
+
+//===========================
+// This is how to use one templating language or another
+// forces usage of the respective render engine by setting the file extension explicitly.
+// res.render( 'about.ejs', { title: 'About' } );
+// res.render( 'about.handlebars', { title: 'About' } );

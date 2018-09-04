@@ -1,7 +1,7 @@
 {
   "name": "parlay-golfer",
   "version": "1.0.0",
-  "description": "Project 2 Starter",
+  "description": "The charity golf APP!",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -11,12 +11,27 @@
   },
   "license": "ISC",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
+    "connect-flash": "^0.1.1",
+    "consolidate": "^0.15.1",
+    "cookie-parser": "^1.4.3",
     "dotenv": "^6.0.0",
+    "ejs": "^2.6.1",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "handlebars": "^4.0.11",
     "inquirer": "^6.2.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.2.12",
+    "morgan": "^1.9.0",
     "mysql2": "^1.5.3",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-google-oauth": "^1.0.0",
+    "passport-local": "^1.0.0",
+    "passport-twitter": "^1.0.4",
     "sequelize": "^4.38.0"
   },
   "devDependencies": {
