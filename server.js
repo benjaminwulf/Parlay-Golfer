@@ -19,6 +19,8 @@ var db = require("./models");
 var app = express();
 var PORT = process.env.PORT || 3000;
 var port2 = process.env.PORT || 8080;
+var configAuth = require('./config/auth'); // use this one for testing
+console.log('configAuth: ', configAuth);
 
 
 // Middleware
@@ -83,7 +85,7 @@ require("./routes/htmlRoutes")(app);
 
 
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function() {
+//db.sequelize.sync(syncOptions).then(function() {
   app.listen(PORT, function() {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
@@ -91,10 +93,10 @@ db.sequelize.sync(syncOptions).then(function() {
       PORT
     );
   });
-});
+//});
 
 // launch ======================================================================
-app.listen(port2);
-console.log('The magic happens on port ' + port2);
+//app.listen(port2);
+//console.log('The magic happens on port ' + port2);
 
 module.exports = app;
