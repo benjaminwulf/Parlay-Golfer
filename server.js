@@ -18,7 +18,7 @@ var db = require("./app/models");
 
 var app = express();
 var PORT = process.env.PORT || 8080;
-// var port2 = process.env.PORT || 8080;
+
 var configAuth = require('./app/config/auth'); // use this one for testing
 console.log('configAuth: ', configAuth);
 
@@ -94,9 +94,5 @@ require('./app/routes/routes.js')(app, passport); // load our routes and pass in
     );
   });
 //});
-
-// launch ======================================================================
-//app.listen(port2);
-//console.log('The magic happens on port ' + port2);
 
 module.exports = app;
