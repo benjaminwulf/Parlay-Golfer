@@ -12,14 +12,14 @@ var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var session      = require('express-session');
 
-var configDB = require('./config/database.js');
+var configDB = require('./app/config/database.js');
 
-var db = require("./models");
+var db = require("./app/models");
 
 var app = express();
 var PORT = process.env.PORT || 3000;
 var port2 = process.env.PORT || 8080;
-var configAuth = require('./config/auth'); // use this one for testing
+var configAuth = require('./app/config/auth'); // use this one for testing
 console.log('configAuth: ', configAuth);
 
 
@@ -57,7 +57,7 @@ if (process.env.NODE_ENV === "test") {
 // configuration ===============================================================
 mongoose.connect(configDB.url); // connect to our database
 
-require('./config/passport')(passport); // pass passport for configuration
+require('./app/config/passport')(passport); // pass passport for configuration
 
 // set up our express application
 app.use(morgan('dev')); // log every request to the console
@@ -78,9 +78,9 @@ app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 
 // routes ======================================================================
-require('./app/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+require('./app/routes/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
+// require("./routes/apiRoutes")(app);
+// require("./routes/htmlRoutes")(app);
 
 
 
