@@ -17,8 +17,8 @@ var configDB = require('./app/config/database.js');
 var db = require("./app/models");
 
 var app = express();
-var PORT = process.env.PORT || 3000;
-var port2 = process.env.PORT || 8080;
+var PORT = process.env.PORT || 8080;
+// var port2 = process.env.PORT || 8080;
 var configAuth = require('./app/config/auth'); // use this one for testing
 console.log('configAuth: ', configAuth);
 
