@@ -14,6 +14,12 @@ module.exports = function(app, passport) {
         });
     });
 
+    // App-Teams SECTION =========================
+    app.get('/teams', function(req, res) {
+
+        res.render('app-teams.ejs');
+    });
+
     // App-Score SECTION =========================
     app.get('/score', function(req, res) {
 

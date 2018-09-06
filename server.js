@@ -14,7 +14,7 @@ var session      = require('express-session');
 
 var configDB = require('./app/config/database.js');
 
-var db = require("./app/models");
+var db = require("./app/models/teams"); // bww not setup yet
 
 var app = express();
 var PORT = process.env.PORT || 8080;
@@ -93,6 +93,5 @@ require('./app/routes/routes.js')(app, passport); // load our routes and pass in
       PORT
     );
   });
-//});
 
 module.exports = app;
