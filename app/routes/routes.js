@@ -57,9 +57,9 @@ module.exports = function(app, passport) {
         res.render('app-map.ejs');
     });
 
-    //Test
-    app.get('/test', function(req, res) {
-        res.render('test.ejs');
+       // App-Select-Team COURSE =========================
+       app.get('/select-course', function(req, res) {
+        res.render('app-selectcourse.ejs');
     });
 
     // App-Scorecard SECTION =========================
