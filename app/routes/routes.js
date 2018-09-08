@@ -46,6 +46,22 @@ module.exports = function(app, passport) {
         });
     });
 
+       // App-Select-Team SECTION =========================
+       app.get('/select-team', function(req, res) {
+
+        res.render('app-selectteam.ejs');
+    });
+
+       // Show the Map-Page
+       app.get('/map', function(req, res) {
+        res.render('app-map.ejs');
+    });
+
+       // App-Select-Team COURSE =========================
+       app.get('/select-course', function(req, res) {
+        res.render('app-selectcourse.ejs');
+    });
+
     // App-Scorecard SECTION =========================
     app.get('/scorecard', function(req, res) {
 
@@ -424,7 +440,7 @@ module.exports = function(app, passport) {
         var user          = req.user;
         user.google.token = undefined;
         user.save(function(err) {
-            res.redirect('/profile');
+            res.redirect('/app-select-hole');
         });
     });
 
