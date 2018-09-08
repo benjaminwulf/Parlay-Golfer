@@ -1,5 +1,5 @@
-const mysql_mongo = require('mysql-mongo-db')
-const mysql = mysql_mongo.createDB('MySQL')
+// const mysql_mongo = require('mysql-mongo-db')
+// const mysql = mysql_mongo.createDB('MySQL')
 
 // load the auth variables
 var configAuth = require('../config/auth'); // use this one for testing
@@ -7,11 +7,11 @@ var configAuth = require('../config/auth'); // use this one for testing
 var configAuth = require('../config/database'); // use this one for testing
 
 // Connection to mysql
-let config = { host: 'localhost', user: 'root', pass: '<password>', db: 'parlay_golfer_db' }
-mysql.connect(config, err => {
-  if(err) throw err
-  console.log(`Connected in ${config.host}/${config.db}`)
-});
+// let config = { host: 'localhost', user: 'root', pass: 'Peruluv2', db: 'parlay_golfer_db' }
+// mysql.connect(config, err => {
+//   if(err) throw err
+//   console.log(`Connected in ${config.host}/${config.db}`)
+// });
 
 // Connection to mongodb
 // let config3 = { host: 'localhost', user: 'root', port: 27017, pass: 'Peruluv2', db: 'User' }
@@ -36,10 +36,10 @@ mysql.connect(config, err => {
 // });
 
 // This will get all the rows of my_table
-mysql.select('teams', null, null, (err, res, fields) => {
-    if (err) throw err
-    console.log(`Num results: ${res.length}`)
-  });
+// mysql.select('teams', null, null, (err, res, fields) => {
+//     if (err) throw err
+//     console.log(`Num results: ${res.length}`)
+//   });
    
   // This will get all the data with specific columns 
 //   let columns = ['nombre', 'edad'] // Must be an array

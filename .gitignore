@@ -69,4 +69,4 @@ typings/
 
 # from easy-node-authentication 
 #config/database.js
-config/auth.js
+app/config/auth.js
