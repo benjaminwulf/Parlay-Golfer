@@ -7,7 +7,9 @@ var configAuth = require('../config/auth'); // use this one for testing
 var configAuth = require('../config/database'); // use this one for testing
 
 // Connection to mysql
-let config = { host: 'localhost', user: 'root', pass: 'Leo2691b', db: 'parlay_golfer_db' }
+
+let config = { host: 'localhost', user: 'root', pass: '<password>', db: 'parlay_golfer_db' }
+
 mysql.connect(config, err => {
   if(err) throw err
   console.log(`Connected in ${config.host}/${config.db}`)

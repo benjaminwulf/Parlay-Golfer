@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Leo2691b",
+    "password": "<password>",
     "database": "parlay_golfer_db",
     "host": "localhost",
     "dialect": "mysql"
