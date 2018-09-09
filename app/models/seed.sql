@@ -1,0 +1,9 @@
+{ "holeid": 75402, "holenumber": 1, "color": "White", "length": 85, "par": 3, "handicap": 8, "teeboxtype": "Men's" }
+{ "holeid": 75403, "holenumber": 2, "color": "White", "length": 128, "par": 3, "handicap": 2, "teeboxtype": "Men's" }
+{ "holeid": 75404, "holenumber": 3, "color": "White", "length": 64, "par": 3, "handicap": 7, "teeboxtype": "Men's" }
+{ "holeid": 75405, "holenumber": 4, "color": "White", "length": 117, "par": 3, "handicap": 5, "teeboxtype": "Men's" }
+{ "holeid": 75406, "holenumber": 5, "color": "White", "length": 134, "par": 3, "handicap": 1, "teeboxtype": "Men's" }
+{ "holeid": 75407, "holenumber": 6, "color": "White", "length": 88, "par": 3, "handicap": 6, "teeboxtype": "Men's" }
+{ "holeid": 75408, "holenumber": 7, "color": "White", "length": 102, "par": 3, "handicap": 4, "teeboxtype": "Men's" }
+{ "holeid": 75409, "holenumber": 8, "color": "White", "length": 104, "par": 3, "handicap": 3, "teeboxtype": "Men's" }
+{ "holeid": 75410, "holenumber": 9, "color": "White", "length": 64, "par": 3, "handicap": 9, "teeboxtype": "Men's" }

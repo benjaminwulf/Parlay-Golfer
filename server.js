@@ -11,12 +11,13 @@ var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var session      = require('express-session');
-
+console.log("PROCESS ENV.....", process.env.NODE_ENV);
 var configDB = require('./app/config/database.js');
 
 var db = require("./app/models/teams"); // bww not setup yet
 
 var app = express();
+
 var PORT = process.env.PORT || 8080;
 
 var configAuth = require('./app/config/auth'); // use this one for testing
@@ -79,9 +80,6 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 
 // routes ======================================================================
 require('./app/routes/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
-// require("./routes/apiRoutes")(app);
-// require("./routes/htmlRoutes")(app);
-
 
 
 // Starting the server, syncing our models ------------------------------------/

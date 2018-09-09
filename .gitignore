@@ -70,3 +70,5 @@ typings/
 # from easy-node-authentication 
 #config/database.js
 app/config/auth.js
+app/config/environment/development.js
+.env
