@@ -18,7 +18,7 @@ var db = require("./app/models/teams"); // bww not setup yet
 
 var app = express();
 
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 38400;
 
 var configAuth = require('./app/config/auth'); // use this one for testing
 console.log('configAuth: ', configAuth);
