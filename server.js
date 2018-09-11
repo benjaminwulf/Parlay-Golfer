@@ -5,6 +5,19 @@ var exphbs = require("express-handlebars");
 var mongoose = require('mongoose'); 
 var passport = require('passport');
 var flash    = require('connect-flash');
+var path = require('path');
+var fs = require('fs');
+var https = require('https');
+
+// BWW Cert
+// var certOptions = {
+//   key: fs.readFileSync(__dirname + '/server.key'),
+//   cert: fs.readFileSync(__dirname + '/server.crt')
+// }
+// var certOptions = {
+//   key: fs.readFileSync('./rootCA.pem', 'utf8'),
+//   cert: fs.readFileSync('./rootCA.key', 'utf8')
+// };
 
 var fs = require('fs'); //bww am I needing this
 var morgan       = require('morgan');
@@ -18,7 +31,7 @@ var db = require("./app/models/teams"); // bww not setup yet
 
 var app = express();
 
-var PORT = process.env.PORT || 38400;
+var PORT = process.env.PORT || 8080;
 
 var configAuth = require('./app/config/auth'); // use this one for testing
 console.log('configAuth: ', configAuth);
@@ -81,6 +94,8 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 // routes ======================================================================
 require('./app/routes/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
 
+// BWW Cert
+// var server = https.createServer(certOptions, app).listen(443)
 
 // Starting the server, syncing our models ------------------------------------/
 //db.sequelize.sync(syncOptions).then(function() {
