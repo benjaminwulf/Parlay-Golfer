@@ -5,9 +5,9 @@ var exphbs = require("express-handlebars");
 var mongoose = require('mongoose'); 
 var passport = require('passport');
 var flash    = require('connect-flash');
-var path = require('path');
-var fs = require('fs');
-var https = require('https');
+// var path = require('path');
+// var fs = require('fs');
+// var https = require('https');
 
 // BWW Cert
 // var certOptions = {
@@ -24,7 +24,7 @@ var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var session      = require('express-session');
-console.log("PROCESS ENV.....", process.env.NODE_ENV);
+// console.log("PROCESS ENV.....", process.env.NODE_ENV);
 var configDB = require('./app/config/database.js');
 
 var db = require("./app/models/teams"); // bww not setup yet
