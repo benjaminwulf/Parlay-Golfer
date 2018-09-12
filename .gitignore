@@ -69,5 +69,3 @@ typings/
 
 # from easy-node-authentication 
 app/config/environment/development.js
-.env
-
