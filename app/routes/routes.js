@@ -31,254 +31,43 @@ module.exports = function(app, passport) {
         res.render('app-selectteam.ejs');
     });
 
-    // App-Score SECTION =========================
+//============================================
+// Top navbar
+//
+    // Score SECTION =========================
     app.get('/score', function(req, res) {
 
-        // BWW Need json obj to live elsewhere???
-        var course = {
-            "coursename": "Harvard Gulch Golf Course"
-        }
-
-        res.render('app-score.ejs', {
-            course: course
-        });
+        res.render('score.ejs')
     });
-   // App-Map SECTION ========================= NEED TO UPDATE with holes/ids
+
+   // Map SECTION ========================= NEED TO UPDATE with holes/ids
    app.get('/map', function(req, res) {
 
-    res.render('app-map.ejs');
-});
-    // App-Select-Hole SECTION =========================
-    app.get('/select-hole', function(req, res) {
-
-        // BWW Need json obj to live elsewhere???
-        var course = {
-            "coursename": "Harvard Gulch Golf Course"
-        }
-
-        res.render('app-select-hole.ejs', {
-            course: course
-        });
+    res.render('map.ejs');
     });
 
-    
-    // App-Scorecard SECTION =========================
+    // Select-Hole SECTION =========================
+    app.get('/select-hole', function(req, res) {
+
+        res.render('select-hole.ejs')
+    });
+
+    // Scorecard SECTION =========================
     app.get('/scorecard', function(req, res) {
 
-        var course = {
-            "courseid": 6127,
-            "holeteeboxes": [
-                {
-                    "holeid": 75402,
-                    "holenumber": 1,
-                    "color": "White",
-                    "length": 85,
-                    "par": 3,
-                    "handicap": 8,
-                    "teeboxtype": "Men's"
-                },
-                {
-                    "holeid": 75402,
-                    "holenumber": 1,
-                    "color": "Red",
-                    "length": 85,
-                    "par": 3,
-                    "handicap": 8,
-                    "teeboxtype": "Women's"
-                },
-                {
-                    "holeid": 75403,
-                    "holenumber": 2,
-                    "color": "White",
-                    "length": 128,
-                    "par": 3,
-                    "handicap": 2,
-                    "teeboxtype": "Men's"
-                },
-                {
-                    "holeid": 75403,
-                    "holenumber": 2,
-                    "color": "Red",
-                    "length": 128,
-                    "par": 3,
-                    "handicap": 2,
-                    "teeboxtype": "Women's"
-                },
-                {
-                    "holeid": 75404,
-                    "holenumber": 3,
-                    "color": "White",
-                    "length": 64,
-                    "par": 3,
-                    "handicap": 7,
-                    "teeboxtype": "Men's"
-                },
-                {
-                    "holeid": 75404,
-                    "holenumber": 3,
-                    "color": "Red",
-                    "length": 64,
-                    "par": 3,
-                    "handicap": 7,
-                    "teeboxtype": "Women's"
-                },
-                {
-                    "holeid": 75405,
-                    "holenumber": 4,
-                    "color": "White",
-                    "length": 117,
-                    "par": 3,
-                    "handicap": 5,
-                    "teeboxtype": "Men's"
-                },
-                {
-                    "holeid": 75405,
-                    "holenumber": 4,
-                    "color": "Red",
-                    "length": 117,
-                    "par": 3,
-                    "handicap": 5,
-                    "teeboxtype": "Women's"
-                },
-                {
-                    "holeid": 75406,
-                    "holenumber": 5,
-                    "color": "White",
-                    "length": 134,
-                    "par": 3,
-                    "handicap": 1,
-                    "teeboxtype": "Men's"
-                },
-                {
-                    "holeid": 75406,
-                    "holenumber": 5,
-                    "color": "Red",
-                    "length": 134,
-                    "par": 3,
-                    "handicap": 1,
-                    "teeboxtype": "Women's"
-                },
-                {
-                    "holeid": 75407,
-                    "holenumber": 6,
-                    "color": "White",
-                    "length": 88,
-                    "par": 3,
-                    "handicap": 6,
-                    "teeboxtype": "Men's"
-                },
-                {
-                    "holeid": 75407,
-                    "holenumber": 6,
-                    "color": "Red",
-                    "length": 88,
-                    "par": 3,
-                    "handicap": 6,
-                    "teeboxtype": "Women's"
-                },
-                {
-                    "holeid": 75408,
-                    "holenumber": 7,
-                    "color": "White",
-                    "length": 102,
-                    "par": 3,
-                    "handicap": 4,
-                    "teeboxtype": "Men's"
-                },
-                {
-                    "holeid": 75408,
-                    "holenumber": 7,
-                    "color": "Red",
-                    "length": 102,
-                    "par": 3,
-                    "handicap": 4,
-                    "teeboxtype": "Women's"
-                },
-                {
-                    "holeid": 75409,
-                    "holenumber": 8,
-                    "color": "White",
-                    "length": 104,
-                    "par": 3,
-                    "handicap": 3,
-                    "teeboxtype": "Men's"
-                },
-                {
-                    "holeid": 75409,
-                    "holenumber": 8,
-                    "color": "Red",
-                    "length": 104,
-                    "par": 3,
-                    "handicap": 3,
-                    "teeboxtype": "Women's"
-                },
-                {
-                    "holeid": 75410,
-                    "holenumber": 9,
-                    "color": "White",
-                    "length": 64,
-                    "par": 3,
-                    "handicap": 9,
-                    "teeboxtype": "Men's"
-                },
-                {
-                    "holeid": 75410,
-                    "holenumber": 9,
-                    "color": "Red",
-                    "length": 64,
-                    "par": 3,
-                    "handicap": 9,
-                    "teeboxtype": "Women's"
-                },
-                {
-                    "holeid": 75411,
-                    "holenumber": 10
-                },
-                {
-                    "holeid": 75412,
-                    "holenumber": 11
-                },
-                {
-                    "holeid": 75413,
-                    "holenumber": 12
-                },
-                {
-                    "holeid": 75414,
-                    "holenumber": 13
-                },
-                {
-                    "holeid": 75415,
-                    "holenumber": 14
-                },
-                {
-                    "holeid": 75416,
-                    "holenumber": 15
-                },
-                {
-                    "holeid": 75417,
-                    "holenumber": 16
-                },
-                {
-                    "holeid": 75418,
-                    "holenumber": 17
-                },
-                {
-                    "holeid": 75419,
-                    "holenumber": 18
-                }
-            ],
-            "coursename": "Harvard Gulch Golf Course"
-        }
+        res.render('scorecard.ejs')
+    });
 
-        res.render('app-scorecard.ejs', {
-            course: course
-        });
+    // Settings SECTION =========================
+    app.get('/settings', function(req, res) {
+
+        res.render('settings.ejs')
     });
 
     // LOGOUT ==============================
     app.get('/logout', function(req, res) {
         req.logout();
-        res.redirect('/');
+        res.redirect('index.ejs');
     });
 
 // =============================================================================
