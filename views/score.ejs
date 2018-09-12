@@ -35,7 +35,9 @@
             }
             
             .container {
-                margin: auto 0px;
+                margin: auto 0;
+                text-align: center;
+                width: 80%;
             }
             
             .grid {
@@ -89,29 +91,54 @@
         </ul>
     </div>
 </nav>
-   
-        <nav class="nav nav-pills nav-fill navbar-expand-lg navbar-light bg-light">
-            <a class="nav-item nav-link" href="#"><img src="https://s3.amazonaws.com/parlay-golfer/img/icons/golf.svg" width="40px"></a>
-            <a class="nav-item nav-link" href="#"><img src="https://s3.amazonaws.com/parlay-golfer/img/icons/score.svg" width="40px"></a>
-            <a class="nav-item nav-link" href="#"><img src="https://s3.amazonaws.com/parlay-golfer/img/icons/drone.svg" width="40px"></a>
-        </nav>
+
+<nav class="nav nav-pills nav-fill navbar-expand-lg navbar-light bg-light">
+    <a class="nav-item nav-link" href="#"><img src="https://s3.amazonaws.com/parlay-golfer/img/icons/golf.svg" width="40px"></a>
+    <a class="nav-item nav-link" href="#"><img src="https://s3.amazonaws.com/parlay-golfer/img/icons/score.svg" width="40px"></a>
+    <a class="nav-item nav-link" href="#"><img src="https://s3.amazonaws.com/parlay-golfer/img/icons/drone.svg" width="40px"></a>
+</nav>
 
 <body>
 
-<!-- ejs code goes here -->
+    <!-- ejs code goes here -->
+
+    <!-- BEGIN JUMBOTRON -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+
+                <button type="button" class="btn btn-primary" style="width: 300px; height: 40px">
+                        <i class="glyphicon glyphicon-triangle-top">UP</i>
+                    </button>
+<br>
+<br>
+<div style="width: 300px; height: 300px; border: 10px solid #000000">
+
+                    <div class="text-align-center">
+                        <h1 style="font-size: 220px">3</h1>
+                   </div>
+            </div>
+
+<br>
+            <button type="button" class="btn btn-primary" style="width: 300px; height: 40px">
+                    <i class="glyphicon glyphicon-triangle-bottom">DOWN</i>
+             </button>
+        </div>
+    </div>
+    <!-- END JUMBOTRON -->
 
 </body>
 
-        <nav class="navbar fixed-bottom  bg-light">
-            <div class="col-xs-4">
-                <button type="button" class="btn btn-primary">
-                    <i class="fas fa-chevron-circle-left"></i>
-                </button>
-            </div>
-            <h2>1st Hole</h2>
-            <button type="button" class="btn btn-primary">
-                <i class="fas fa-chevron-circle-right"></i>
-            </button>
-        </nav>
+<nav class="navbar fixed-bottom  bg-light">
+    <div class="col-xs-4">
+        <button type="button" class="btn btn-primary">
+            <i class="fas fa-chevron-circle-left"></i>
+        </button>
     </div>
+    <h2>1st Hole</h2>
+    <button type="button" class="btn btn-primary">
+        <i class="fas fa-chevron-circle-right"></i>
+    </button>
+</nav>
+</div>
+
 </html>
