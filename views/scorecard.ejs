@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Parlay-Golfer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="drunken-parrot.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="drunken-parrot.css">
+
+    <style>
+        body {
+            background-color: #fff;        
+                    }
+                    #font-barcode {
+                font-family: 'Libre Barcode 39';
+            }
+            
+            .container {
+                margin: auto 0px;
+            }
+            
+            .grid {
+                align-self: center;
+            }
+        
+            .img-responsive.center-block {
+                border-radius: 20px;
+            }
+            
+            @media screen and (max-width: 768px) {
+                .text-align-tablet {
+                    text-align: left;
+                }
+                .code-menu {
+                    text-align: left;
+                }
+            }
+    </style>
+</head>
+<!-- BEGIN NAVBAR  -->
+<nav class="navbar navbar-toggleable navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="map.ejs"> 𝓟𝓪𝓻𝓵𝓪𝔂️⛳️𝓖𝓸𝓵𝓯𝓮𝓻
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="./">Home
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./select-hole">Select Hole</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./score">Score</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./scorecard">Scorecard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./settings">Settings</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+   
+        <nav class="nav nav-pills nav-fill navbar-expand-lg navbar-light bg-light">
+            <a class="nav-item nav-link" href="./map"><img src="https://s3.amazonaws.com/parlay-golfer/img/icons/golf.svg" width="40px"></a>
+            <a class="nav-item nav-link" href="./scorecard"><img src="https://s3.amazonaws.com/parlay-golfer/img/icons/score.svg" width="40px"></a>
+            <a class="nav-item nav-link" href="./fly-by"><img src="https://s3.amazonaws.com/parlay-golfer/img/icons/drone.svg" width="40px"></a>
+        </nav>
+
+<body>
+
+    <!-- ejs code goes here -->
+            <!-- SCORECARD THAT IS FILLED USING jQuery -->
+            <div class="col-sm-8">
+                <div class="card" style="width: 24rem;">
+                    <table border-style="dashed" style="border: black">
+                        <th>SCORECARD</th>
+                        <tr >
+                            <th>
+                                HOLE
+                            </th>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                PAR
+                            </th>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                        </tr>
+                        <th>
+                            <!-- bww This will use arrFront -->
+                            STROKES
+                        </th>
+                        <!-- bww This data will be created using jQuery and classes or ids -->
+                        <td class="hole" id="hole-01">X</td>
+                        <td class="hole" id="hole-02">X</td>
+                        <td class="hole" id="hole-03">X</td>
+                        <td class="hole" id="hole-04">X</td>
+                        <td class="hole" id="hole-05">X</td>
+                        <td class="hole" id="hole-06">X</td>
+                        <td class="hole" id="hole-07">X</td>
+                        <td class="hole" id="hole-08">X</td>
+                        <td class="hole" id="hole-09">X</td>
+                        </tr>
+                        <th>
+                            TOTAL
+                        </th>
+                        <!-- bww This data will be created using jQuery and classes or ids -->
+                        <td class="total" id="total-01">X</td>
+                        <td class="total" id="total-02">X</td>
+                        <td class="total" id="total-03">X</td>
+                        <td class="total" id="total-04">X</td>
+                        <td class="total" id="total-05">X</td>
+                        <td class="total" id="total-06">X</td>
+                        <td class="total" id="total-07">X</td>
+                        <td class="total" id="total-08">X</td>
+                        <td class="total" id="total-09">X</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+    <div>
+        <h1 id="display-message"></h1>
+    </div>
+</body>
+
+        <nav class="navbar fixed-bottom  bg-light">
+            <div class="col-xs-4">
+                <button type="button" class="btn btn-primary">
+                    <i class="fas fa-chevron-circle-left"></i>
+                </button>
+            </div>
+            <h2>1st Hole</h2>
+            <button type="button" class="btn btn-primary">
+                <i class="fas fa-chevron-circle-right"></i>
+            </button>
+        </nav>
+    </div>
+</html>
