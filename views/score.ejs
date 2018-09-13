@@ -93,9 +93,9 @@
 </nav>
 
 <nav class="nav nav-pills nav-fill navbar-expand-lg navbar-light bg-light">
-    <a class="nav-item nav-link" href="#"><img src="https://s3.amazonaws.com/parlay-golfer/img/icons/golf.svg" width="40px"></a>
-    <a class="nav-item nav-link" href="#"><img src="https://s3.amazonaws.com/parlay-golfer/img/icons/score.svg" width="40px"></a>
-    <a class="nav-item nav-link" href="#"><img src="https://s3.amazonaws.com/parlay-golfer/img/icons/drone.svg" width="40px"></a>
+    <a class="nav-item nav-link" href="./map"><img src="https://s3.amazonaws.com/parlay-golfer/img/icons/golf.svg" width="40px"></a>
+    <a class="nav-item nav-link" href="./scorecard"><img src="https://s3.amazonaws.com/parlay-golfer/img/icons/score.svg" width="40px"></a>
+    <a class="nav-item nav-link" href="./fly-by"><img src="https://s3.amazonaws.com/parlay-golfer/img/icons/drone.svg" width="40px"></a>
 </nav>
 
 <body>
@@ -114,18 +114,25 @@
 <div style="width: 300px; height: 300px; border: 10px solid #000000">
 
                     <div class="text-align-center">
-                        <h1 style="font-size: 220px">3</h1>
+                        <h1 id="display-score" style="font-size: 220px">3</h1>
                    </div>
             </div>
 
 <br>
+        <div>
             <button type="button" class="btn btn-primary" style="width: 300px; height: 40px">
                     <i class="glyphicon glyphicon-triangle-bottom">DOWN</i>
              </button>
         </div>
+        <div>
+            <button type="button" class="btn btn-warning" style="width: 300px; height: 40px">
+                    <i id="save-score" class="glyphicon glyphicon-triangle-bottom">Save</i>
+             </button>
+        </div>
     </div>
+</div>
     <!-- END JUMBOTRON -->
-
+<script type="text/javascript" src="../app/models/score.js"></script>
 </body>
 
 <nav class="navbar fixed-bottom  bg-light">

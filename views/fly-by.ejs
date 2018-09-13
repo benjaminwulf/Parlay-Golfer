@@ -99,74 +99,109 @@
 <body>
 
     <!-- ejs code goes here -->
-            <!-- SCORECARD THAT IS FILLED USING jQuery -->
-            <div class="col-sm-8">
-                <div class="card" style="width: 24rem;">
-                    <table border-style="dashed" style="border: black">
-                        <th>SCORECARD</th>
-                        <tr >
-                            <th>
-                                HOLE
-                            </th>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
-                            <td>8</td>
-                            <td>9</td>
-                        </tr>
-                        <tr>
-                            <th>
-                                PAR
-                            </th>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>3</td>
-                        </tr>
-                        <th>
-                            <!-- bww This will use arrFront -->
-                            STROKES
-                        </th>
-                        <!-- bww This data will be created using jQuery and classes or ids -->
-                        <td class="hole" id="hole-01">X</td>
-                        <td class="hole" id="hole-02">X</td>
-                        <td class="hole" id="hole-03">X</td>
-                        <td class="hole" id="hole-04">X</td>
-                        <td class="hole" id="hole-05">X</td>
-                        <td class="hole" id="hole-06">X</td>
-                        <td class="hole" id="hole-07">X</td>
-                        <td class="hole" id="hole-08">X</td>
-                        <td class="hole" id="hole-09">X</td>
-                        </tr>
-                        <th>
-                            TOTAL
-                        </th>
-                        <!-- bww This data will be created using jQuery and classes or ids -->
-                        <td class="total" id="total-01">X</td>
-                        <td class="total" id="total-02">X</td>
-                        <td class="total" id="total-03">X</td>
-                        <td class="total" id="total-04">X</td>
-                        <td class="total" id="total-05">X</td>
-                        <td class="total" id="total-06">X</td>
-                        <td class="total" id="total-07">X</td>
-                        <td class="total" id="total-08">X</td>
-                        <td class="total" id="total-09">X</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-    <div>
-        <h1 id="display-message"></h1>
+    <div class="container">
+        <div class="row">
+           <div class="col">
+           <h1>Car Trivia</h1><button class="btn-success" id="game-reset">Game Reset</button>
+           </div>
+           <!-- HERE THE QUESTION ARE PRESENTED VIA jQuery -->
+               <div class="col" id="question-box">
+                   <h1>Choose Hole: </h1><h1 class="question-number"></h1>
+                   <button class="btn-success" id="next-play" >Choose Fly By:</button>
+               <div class="col">
+               </div>
+           </div>
+           <div class ="row">
+               <div class="col">
+                   <div> 
+                       <h2 class="question-asked"></h2>
+                   </div>
+               </div>
+           </div>
+   
+           <br>
+
+<!-- Choose Hole -->
+           <div class="row">
+               <div class="col">
+                   <div class="card">
+                       <button type="button" class="btn btn-primary choice" id="choice-1">A
+                       </button>
+                       <card-body class="text-1"></card-body>
+                   </div>
+               </div>
+               <div class="col">
+                   <div class="card">
+                       <button type="button" class="btn btn-primary choice" id="choice-2">B
+                       </button>
+                       <card-body class="text-2"></card-body>
+                   </div>
+               </div>
+               <div class="w-100"></div>
+               <div class="col">
+                   <div class="card">
+                       <button type="button" class="btn btn-primary choice" id="choice-3">C
+                       </button>
+                       <card-body class="text-3"></card-body>
+                   </div>
+               </div>
+               <div class="col">
+                   <div class="card">
+                       <button type="button" class="btn btn-primary choice" id="choice-4">D
+                       </button>
+                       <card-body class="text-4"></card-body>
+                   </div>
+               </div>
+           </div>
+               <div class="col">
+                   <div class="card">
+                       <button type="button" class="btn btn-primary choice" id="choice-5">A
+                       </button>
+                       <card-body class="text-5"></card-body>
+                   </div>
+               </div>
+               <div class="col">
+                   <div class="card">
+                       <button type="button" class="btn btn-primary choice" id="choice-6">B
+                       </button>
+                       <card-body class="text-6"></card-body>
+                   </div>
+               </div>
+               <div class="w-100"></div>
+               <div class="col">
+                   <div class="card">
+                       <button type="button" class="btn btn-primary choice" id="choice-7">C
+                       </button>
+                       <card-body class="text-7"></card-body>
+                   </div>
+               </div>
+               <div class="col">
+                   <div class="card">
+                       <button type="button" class="btn btn-primary choice" id="choice-8">D
+                       </button>
+                       <card-body class="text-8"></card-body>
+                   </div>
+               </div>
+               <div class="col">
+                   <div class="card">
+                       <button type="button" class="btn btn-primary choice" id="choice-9">D
+                       </button>
+                       <card-body class="text-9"></card-body>
+                   </div>
+               </div>
+           </div>
+       </div>
+   
+<!-- youtube iframe -->
+<!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <div id="player"></div>
+
+    <div class="text-center">
+        <p>View code at <a href="https://github.com/benjaminwulf/Parlay-Golfer">GitHub</a>.</p>
     </div>
+
+<script type="text/javascript" src="../app/models/fly-by.js"></script>
+        
 </body>
 
         <nav class="navbar fixed-bottom  bg-light">
