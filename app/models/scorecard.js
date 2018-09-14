@@ -39,47 +39,7 @@ $("#resetGame").on("click", function() {
 });
 
 //=================================================================================
-// var golfBalls = randomNumGolfBall();
 
-// // Function that generates random values for our crystals and returns our crystals object.
-// function randomNumGolfBall() {
-//   // Crystals object.
-//   return {
-//     green: {
-//       points: Math.floor(Math.random() * 12) + 1,
-//       src: "https://s3-us-west-2.amazonaws.com/benji.to/img-ball_green.png"
-//     },
-//     blue: {
-//       points: Math.floor(Math.random() * 12) + 1,
-//       src: "https://s3-us-west-2.amazonaws.com/benji.to/img-ball_blue.png"
-//     },
-//     orange: {
-//       points: Math.floor(Math.random() * 12) + 1,
-//       src: "https://s3-us-west-2.amazonaws.com/benji.to/img-ball_orange.png"
-//     },
-//     pink: {
-//       points: Math.floor(Math.random() * 12) + 1,
-//       src: "https://s3-us-west-2.amazonaws.com/benji.to/img-ball_pink.png"
-//     }
-//   };
-// };
-
-
-// var newDiv = "<img src='" + golfBalls.green.src + "' class='ball-image' id='ball-green'>";
-//   newDiv += "<img src='" + golfBalls.blue.src + "' class='ball-image' id='ball-blue'>";
-//   newDiv += "<img src='" + golfBalls.orange.src + "' class='ball-image' id='ball-orange'>";
-//   newDiv += "<img src='" + golfBalls.pink.src + "' class='ball-image' id='ball-pink'>";
-
-// $("#golf-ball").append(newDiv);
-
-//=================================================================================
-// var greenPoints = golfBalls.green.points;
-// var bluePoints = golfBalls.blue.points;
-// var orangePoints = golfBalls.orange.points;
-// var pinkPoints = golfBalls.pink.points;
-// ================
-// Import modole score.js
-// chg id to be "#save-score"
 
 $("#ball-green").on("click", function() {
   sumPoints += greenPoints;
@@ -88,27 +48,7 @@ $("#ball-green").on("click", function() {
   $("#strokes").text(greenPoints);
   $("#sum-points").text(sumPoints);
 });
-// $("#ball-blue").on("click", function() {
-//   sumPoints += bluePoints;
-//   counter++;
-//   gameChecker();
-//   $("#strokes").text(bluePoints);
-//   $("#sum-points").text(sumPoints);
-// });
-// $("#ball-orange").on("click", function() {
-//   sumPoints += orangePoints;
-//   counter++;
-//   gameChecker();
-//   $("#strokes").text(orangePoints);
-//   $("#sum-points").text(sumPoints);
-// });
-// $("#ball-pink").on("click", function() {
-//   sumPoints += pinkPoints;
-//   counter++;
-//   gameChecker();
-//   $("#strokes").text(pinkPoints);
-//   $("#sum-points").text(sumPoints);
-// });
+
 //=================================================================================
 
 $("#save-score").on("click", function () { // needs to refer to score.js
@@ -154,42 +94,7 @@ switch (counter) {
   counter = 9;
   $("#hole-09").text(sumPoints);
   break;
-  // case 10:
-  // counter = 10;
-  // $("#hole-10").text(sumPoints);
-  // break;
-  // case 11:
-  // counter = 11;
-  // $("#hole-11").text(sumPoints);
-  // break;
-  // case 12:
-  // counter = 12;
-  // $("#hole-12").text(sumPoints);
-  // break;
-  // case 13:
-  // counter = 13;
-  // $("#hole-13").text(sumPoints);
-  // break;
-  // case 14:
-  // counter = 14;
-  // $("#hole-14").text(sumPoints);
-  // break;
-  // case 15:
-  // counter = 15;
-  // $("#hole-15").text(sumPoints);
-  // break;
-  // case 16:
-  // counter = 16;
-  // $("#hole-16").text(sumPoints);
-  // break;
-  // case 17:
-  // counter = 17;
-  // $("#hole-17").text(sumPoints);
-  // break;
-  // case 18:
-  // counter = 18;
-  // $("#hole-18").text(sumPoints);
-  // break;
+  
   case 10:
   counter > 10;
   $("#display-message").text("Head to the 19th hole...")

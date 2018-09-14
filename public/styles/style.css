@@ -1,27 +1,36 @@
-body {
-  background-color: #fff;        
-          }
-          #font-barcode {
-      font-family: 'Libre Barcode 39';
-  }
-  
-  .container {
-      margin: auto 0px;
-  }
-  
-  .grid {
-      align-self: center;
-  }
 
-  .img-responsive.center-block {
-      border-radius: 20px;
-  }
-  
-  @media screen and (max-width: 768px) {
-      .text-align-tablet {
-          text-align: left;
-      }
-      .code-menu {
-          text-align: left;
-      }
-  }
+
+#font-barcode {
+    font-family: 'Libre Barcode 39';
+
+}
+
+.container {
+    margin: auto 0px;
+}
+
+.grid {
+    align-self: center;
+}
+
+.img-responsive.center-block {
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .text-align-tablet {
+        text-align: left;
+    }
+
+    .code-menu {
+        text-align: left;
+    }
+}
+
+.homeimage {
+    background-image: url("https://coyotecreekgolf.com/wp-content/uploads/2018/05/golf-tournament-6.jpg");
+
+}
+.jumbotron{
+    opacity:.7;
+}
