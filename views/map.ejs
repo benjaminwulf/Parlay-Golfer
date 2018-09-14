@@ -24,36 +24,11 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
             crossorigin="anonymous"></script>
             <link rel="stylesheet" href="/styles/style.css">
-
-    <!-- comment -->
-    <!-- <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Parlay-Golfer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-        crossorigin="anonymous"> -->
-    <!-- <link rel="stylesheet" href="./../../public/styles/bootstrap4-vibrant-sea.min.css"> -->
-    <!-- <link rel="stylesheet" href="/styles/style.css">
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script> -->
-
-        <!-- <style>
-        body {
-            background-color: rgb(54, 67, 71);
-        }
-        .jumbotron {
-            height: 20vh;
-        }
-        
-    </style> -->
 </head>
 
 <!-- BEGIN NAVBAR  -->
 <nav class="navbar navbar-toggleable navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="map.ejs"> 𝓟𝓪𝓻𝓵𝓪𝔂️⛳️𝓖𝓸𝓵𝓯𝓮𝓻
+    <a class="navbar-brand" href="#"> 𝓟𝓪𝓻𝓵𝓪𝔂️⛳️𝓖𝓸𝓵𝓯𝓮𝓻
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
@@ -78,12 +53,6 @@
         </ul>
     </div>
 </nav>
-<!--    
-        <nav class="nav nav-pills nav-fill navbar-expand-lg navbar-light bg-light">
-            <a class="nav-item nav-link" href="#the-map"><img src="https://s3.amazonaws.com/parlay-golfer/img/icons/golf.svg" width="40px"></a>
-            <a class="nav-item nav-link" href="#mark-score"><img src="https://s3.amazonaws.com/parlay-golfer/img/icons/score.svg" width="40px"></a>
-            <a class="nav-item nav-link" href="#fly-over"><img src="https://s3.amazonaws.com/parlay-golfer/img/icons/drone.svg" width="40px"></a>
-        </nav> -->
 
 <body>
     <div class="container">
@@ -194,7 +163,7 @@
                 </div>
             </div>
 
-            <div id="fly-over" class="tab-pane fade">
+            <div id="player" class="tab-pane fade">
 
             </div>
         </div>
@@ -320,6 +289,49 @@
         //     console.log("Player Score submiteed to MySQL db: " + playerScore)
         // })
 
+// START YouTube script
+
+var youtube = { 
+hole01: "Gu7zlL42_3U",
+hole02: "ZQOVvv5c-e8",
+hole03: "DAkKaogbK0M",
+hole04: "_c4XPqiKJWg",
+hole05: "rmogCu_UWtU",
+hole06: "zjSF7bSfNFg",
+hole07: "PJYHBgB1IHs",
+hole08: "uKNNdtqq1CE",
+hole09: "yxdz20RfMvc"
+};
+
+// START youtube iframe code
+    $("#player").attr('player');
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var player;
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+        height: '319',
+        width: '420',
+        videoId: 'youtube.hole01',
+        events: {
+            'onReady': onPlayerReady
+        }
+    });
+}
+
+// 4. The API will call this function when the video player is ready.
+function onPlayerReady(event) {
+    player.setPlaybackRate(2);
+    event.target.playVideo(1);
+}
+// END FLY OVER SCRIPT
 
     </script>
 </body>
