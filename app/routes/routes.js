@@ -50,7 +50,7 @@ app.get('/test', function(req, res) {
    // Map SECTION ========================= NEED TO UPDATE with holes/ids
    app.get('/map', function(req, res) {
 
-    res.render('map.ejs');
+    res.render('map1.ejs');
     });
 
     // Select-Hole SECTION =========================
