@@ -1,0 +1,27 @@
+body {
+  background-color: #fff;        
+          }
+          #font-barcode {
+      font-family: 'Libre Barcode 39';
+  }
+  
+  .container {
+      margin: auto 0px;
+  }
+  
+  .grid {
+      align-self: center;
+  }
+
+  .img-responsive.center-block {
+      border-radius: 20px;
+  }
+  
+  @media screen and (max-width: 768px) {
+      .text-align-tablet {
+          text-align: left;
+      }
+      .code-menu {
+          text-align: left;
+      }
+  }

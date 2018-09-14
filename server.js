@@ -5,6 +5,8 @@ var exphbs = require("express-handlebars");
 var mongoose = require('mongoose'); 
 var passport = require('passport');
 var flash    = require('connect-flash');
+// app.use(express.static('public'));
+
 // var path = require('path');
 // var fs = require('fs');
 // var https = require('https');
