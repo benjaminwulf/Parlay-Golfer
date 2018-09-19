@@ -67,7 +67,7 @@
         <nav class="nav nav-pills nav-fill">
             <a data-toggle="pill" class="nav-item nav-link active" href="#the-map"><img src="https://s3.amazonaws.com/parlay-golfer/img/icons/golf.svg" width="40px"><br>Map</a>
             <a data-toggle="pill" class="nav-item nav-link" href="#mark-score"><img src="https://s3.amazonaws.com/parlay-golfer/img/icons/score.svg" width="40px"><br>Mark Score</a>
-            <a data-toggle="pill" id=fly class="nav-item nav-link" href="#fly-over"><img src="https://s3.amazonaws.com/parlay-golfer/img/icons/drone.svg" width="40px"><br><br>Fly-over</a>
+            <a data-toggle="pill" class="nav-item nav-link" href="#fly-over"><img src="https://s3.amazonaws.com/parlay-golfer/img/icons/drone.svg" width="40px"><br><br>Fly-over</a>
         </nav>
 
         <div class="tab-content">
@@ -170,20 +170,6 @@
                 </div>
             </div>
 
-            <div id="fly-over" class="tab-pane fade">
-                <div class="jumbotron">
-                    <div class="container">
-                        <div id= "flyview">
-                            <iframe id="flyplease" class="card-img-top" src="" style="height:260px;"></iframe>
-
-                            <button class="btn btn-primary btn-block" id="play">Play
-                                <h1><i class="fas fa-chevron-up"></i></h1>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div id="player" class="tab-pane fade">
 
             </div>
@@ -212,15 +198,10 @@
         $(document).ready(function () {
             var currentHole = 0;
             $("#white").html("White: " + holes[currentHole].white);
-            $("#hole-num").html(holes[currentHole].name);
-            $("#image").attr("src", holes[currentHole].photo);
-
-
-
-
-            $('#play').on('click', function () {
-                $("#flyplease").attr("src", holes[currentHole].fly)
-            })
+            $("#hole-num").html(holes[currentHole].name)
+            $("#image").attr("src", holes[currentHole].photo)
+            // $("#image").attr('player');
+            $("#image").attr("src", );
 
 
             $('#next-hole').on('click', function () {
@@ -236,12 +217,7 @@
                 $("#hole-num").html(holes[currentHole].name);
                 $("#image").attr("src", holes[currentHole].photo)
             })
-
         });
-
-
-
-
     </script>
 
     <script>
@@ -250,7 +226,6 @@
                 photo: "https://s3.amazonaws.com/parlay-golfer/img/hole/hole01.png",
                 white: "85 yds",
                 par: "3",
-                fly: "https://www.youtube.com/embed/Gu7zlL42_3U"
             },
 
             {
@@ -258,63 +233,48 @@
                 photo: "https://s3.amazonaws.com/parlay-golfer/img/hole/hole02.png",
                 white: "128 yds",
                 par: "3",
-                fly: "https://www.youtube.com/embed/ZQOVvv5c-e8"
             },
             {
                 name: "3rd Hole",
                 photo: "https://s3.amazonaws.com/parlay-golfer/img/hole/hole03.png",
                 white: "164 yds",
                 par: "3",
-                fly: "https://www.youtube.com/embed/DAkKaogbK0M"
-
             },
             {
                 name: "4th Hole",
                 photo: "https://s3.amazonaws.com/parlay-golfer/img/hole/hole04.png",
                 white: "117 yds",
                 par: "3",
-                fly: "https://www.youtube.com/embed/_c4XPqiKJWg"
-
             },
             {
                 name: "5th Hole",
                 photo: "https://s3.amazonaws.com/parlay-golfer/img/hole/hole05.png",
                 white: "134 yds",
                 par: "3",
-                fly: "https://www.youtube.com/embed/rmogCu_UWtU"
-
             },
             {
                 name: "6th Hole",
                 photo: "https://s3.amazonaws.com/parlay-golfer/img/hole/hole06.png",
                 white: "88 yds",
                 par: "3",
-                fly: "https://www.youtube.com/embed/zjSF7bSfNFg"
-
             },
             {
                 name: "7th Hole",
                 photo: "https://s3.amazonaws.com/parlay-golfer/img/hole/hole07.png",
                 white: "102 yds",
                 par: "3",
-                fly: "https://www.youtube.com/embed/PJYHBgB1IHs"
-
             },
             {
                 name: "8th Hole",
                 photo: "https://s3.amazonaws.com/parlay-golfer/img/hole/hole08.png",
                 white: "104 yds",
                 par: "3",
-                fly: "https://www.youtube.com/embed/uKNNdtqq1CE"
-
             },
             {
                 name: "9th Hole",
                 photo: "https://s3.amazonaws.com/parlay-golfer/img/hole/hole09.png",
                 white: "64 yds",
                 par: "3",
-                fly: "https://www.youtube.com/embed/yxdz20RfMvc"
-
             },
         ]
     </script>
@@ -337,10 +297,10 @@
         // $('#submit-score').on('click', function () {
         //     console.log("Player Score submiteed to MySQL db: " + playerScore)
         // })
+    </script>
 
+<script>
 // START YouTube script
-
-
 
 var youtube = { 
 hole01: "Gu7zlL42_3U",
@@ -355,7 +315,7 @@ hole09: "yxdz20RfMvc"
 };
 
 // START youtube iframe code
-    $("#player").attr('player');
+
 // 2. This code loads the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
 
@@ -383,8 +343,8 @@ function onPlayerReady(event) {
     event.target.playVideo(1);
 }
 // END FLY OVER SCRIPT
+</script>
 
-    </script>
 </body>
 
 </html>
