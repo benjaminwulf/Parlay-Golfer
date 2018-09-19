@@ -25,17 +25,9 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/styles/style.css">
 
-    <style>
-        .btn-huge{
-            padding:40px;
-            width:32%;
 
-        }
-
-</style>
-
+  
 </head>
-
 <!-- BEGIN NAVBAR  -->
 <nav class="navbar navbar-toggleable navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="map.ejs"> 𝓟𝓪𝓻𝓵𝓪𝔂️⛳️𝓖𝓸𝓵𝓯𝓮𝓻
@@ -63,54 +55,52 @@
         </ul>
     </div>
 </nav>
+<!--    
+        <nav class="nav nav-pills nav-fill navbar-expand-lg navbar-light bg-light">
+            <a class="nav-item nav-link" href="./map"><img src="https://s3.amazonaws.com/parlay-golfer/img/icons/golf.svg" width="40px"></a>
+            <a class="nav-item nav-link" href="./scorecard"><img src="https://s3.amazonaws.com/parlay-golfer/img/icons/score.svg" width="40px"></a>
+            <a class="nav-item nav-link" href="./fly-by"><img src="https://s3.amazonaws.com/parlay-golfer/img/icons/drone.svg" width="40px"></a>
+        </nav> -->
 
+        <nav class="nav nav-pills nav-fill">
+                <a class="nav-item nav-link" href="./map"><img src="https://s3.amazonaws.com/parlay-golfer/img/icons/golf.svg" width="40px"><br>Map</a>
+                <a data-toggle="pill" class="nav-item nav-link" href="./map/#mark-score"><img src="https://s3.amazonaws.com/parlay-golfer/img/icons/score.svg" width="40px"><br>Mark Score</a>
+                <a data-toggle="pill" class="nav-item nav-link" href="./map/#fly-over"><img src="https://s3.amazonaws.com/parlay-golfer/img/icons/drone.svg" width="40px"><br><br>Fly-over</a>
+         </nav>
 <body>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col">
-                <a href="/map" role="button" class="btn btn-primary btn-huge">
-                    <h1 class="text-center">1</h1>
-                </a>
-                <a href="/map" role="button" class="btn btn-primary btn-huge">
-                    <h1 class="text-center">2</h1>
-                </a>
-                <a href="/map" role="button" class="btn btn-primary btn-huge">
-                    <h1 class="text-center">3</h1>
-                </a>
-            </div>
-        </div>
-        <div class="row" style="padding-top: .5rem">
-            <div class="col">
-                <a href="/map" role="button" class="btn btn-primary btn-huge">
-                    <h1 class="text-center">4</h1>
-                </a>
-                <a href="/map" role="button" class="btn btn-primary btn-huge">
-                    <h1 class="text-center">5</h1>
-                </a>
-                <a href="/map" role="button" class="btn btn-primary btn-huge">
-                    <h1 class="text-center">6</h1>
-                </a>
-            </div>
-        </div>
-        <div class="row" style="padding-top: .5rem">
-            <div class="col">
-                <a href="/map" role="button" class="btn btn-primary btn-huge">
-                    <h1 class="text-center">7</h1>
-                </a>
-                <a href="/map" role="button" class="btn btn-primary btn-huge">
-                    <h1 class="text-center">8</h1>
-                </a>
-                <a href="/map" role="button" class="btn btn-primary btn-huge">
-                    <h1 class="text-center">9</h1>
-                </a>
-            </div>
-        </div>
-
-    </div>
+        <div class="container">
+                <div class="btn-group btn-group-lg" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-primary" href="./map"><h2>01</h2></button>
+                    <button type="button" class="btn btn-primary"><h2>02</h2></button>
+                    <button type="button" class="btn btn-primary"><h2>03 </h2></button>
+                </div>
+                <br>
+                <div class="btn-group btn-group-lg" role="group" aria-label="Second group">
+                    <button type="button" class="btn btn-primary"><h2>04</h2></button>
+                    <button type="button" class="btn btn-primary"><h2>05</h2></button>
+                    <button type="button" class="btn btn-primary"><h2>06</h2></button>
+                </div>
+                <br>
+                <div class="btn-group btn-group-lg" role="group" aria-label="Third group">
+                    <button type="button" class="btn btn-primary"><h2>07</h2></button>
+                    <button type="button" class="btn btn-primary"><h2>08</h2></button>
+                    <button type="button" class="btn btn-primary"><h2>09</h2></button>
+                </div>
+            <br>
 
 </body>
 
-</div>
-
+        <nav class="navbar fixed-bottom  bg-light">
+            <div class="col-xs-4">
+                <button type="button" class="btn btn-primary">
+                    <i class="fas fa-chevron-circle-left"></i>
+                </button>
+            </div>
+            <h2>1st Hole</h2>
+            <button type="button" class="btn btn-primary">
+                <i class="fas fa-chevron-circle-right"></i>
+            </button>
+        </nav>
+    </div>
 </html>

@@ -27,7 +27,6 @@
     "https": "^1.0.0",
     "inquirer": "^6.2.0",
     "method-override": "^3.0.0",
-    "module.js": "^2.2.4",
     "mongoose": "^5.2.13",
     "morgan": "^1.9.0",
     "mysql-mongo-db": "^1.0.5",

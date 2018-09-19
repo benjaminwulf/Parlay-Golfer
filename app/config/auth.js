@@ -4,4 +4,3 @@
 // console.log("PROCESS ENV.....", process.env.NODE_ENV);
 
 module.exports = require('./environment/development.js');
-// module.exports = require('./environment/production.js');

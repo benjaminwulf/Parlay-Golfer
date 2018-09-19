@@ -24,13 +24,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
             crossorigin="anonymous"></script>
             <link rel="stylesheet" href="/styles/style.css">
-            <script>
-                    $( document ).ready(function() {
-                            });
-                         
-                            $( window ).on("load", function() {
-                            });
-            </script>
 </head>
 
 <!-- BEGIN NAVBAR  -->
@@ -200,9 +193,6 @@
             $("#white").html("White: " + holes[currentHole].white);
             $("#hole-num").html(holes[currentHole].name)
             $("#image").attr("src", holes[currentHole].photo)
-            // $("#image").attr('player');
-            $("#image").attr("src", );
-
 
             $('#next-hole').on('click', function () {
                 currentHole++;
@@ -217,6 +207,7 @@
                 $("#hole-num").html(holes[currentHole].name);
                 $("#image").attr("src", holes[currentHole].photo)
             })
+
         });
     </script>
 
@@ -297,9 +288,7 @@
         // $('#submit-score').on('click', function () {
         //     console.log("Player Score submiteed to MySQL db: " + playerScore)
         // })
-    </script>
 
-<script>
 // START YouTube script
 
 var youtube = { 
@@ -315,7 +304,7 @@ hole09: "yxdz20RfMvc"
 };
 
 // START youtube iframe code
-
+    $("#player").attr('player');
 // 2. This code loads the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
 
@@ -343,8 +332,8 @@ function onPlayerReady(event) {
     event.target.playVideo(1);
 }
 // END FLY OVER SCRIPT
-</script>
 
+    </script>
 </body>
 
 </html>

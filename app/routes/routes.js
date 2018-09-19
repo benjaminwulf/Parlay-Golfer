@@ -259,3 +259,81 @@ function isLoggedIn(req, res, next) {
 
 //=============================================
 // // Routes for MongoDB
+
+// // Save Score to mongodb collection
+// app.post("/score", function (req, res) {
+//     console.log(req.body, function (err, score) {
+//         // Error logging
+//         if (err) {
+//             console.log("Error: didn't write score to db collection");
+//         } else {
+//             // Send new value to the browser
+//             // Using ajax request
+//             res.send(score);
+//         }
+//     });
+// });
+
+// // Retrive all scores for scorecard
+// app.get("/scorecard", function (req, res) {
+//     // find all team scores in parlay_golfer_collection
+//     db.parlay_golfer_collection.find({}, function (err, found) {
+//         // Log error message if err
+//         if (err) {
+//             console.log("find parlay_golfer_collection", err);
+//         } else {
+//             // if not err send json score object to browser
+//             // ajax request
+//             res.json(found);
+//         }
+//     });
+// });
+
+// // Select one score by an id
+// app.get("/find/:id", function (req, res) {
+//     db.parlay_golfer_collection.findOne({
+//             // use id in url
+//             _id: mongojs.ObjectId(req.params.id)
+//         },
+//         function (err, found) {
+//             // if err log err
+//             if (err) {
+//                 console.log(err);
+//                 res.send(err);
+//             } else {
+//                 // send score to the browser
+//                 // ajax request
+//                 console.log(found);
+//                 res.send(found);
+//             }
+//         }
+//     );
+// });
+
+// // Update one score by an id
+// app.post("/update/:id", function(req,res) {
+//     // update score that matches object id
+//     db.parlay_golfer_collection.update(
+//         {
+//             _id: mongojs.ObjectId(req.params.id)
+//         },
+//         {
+//             $set: {
+//                 score: req.body.score,
+//                 modified: Date.now()
+//             }
+//         },
+//         function(err, edited) {
+//             if (err) {
+//                 console.log(err);
+//                 res.send(err);
+//             } else {
+//                 console.log(edited);
+//                 res.send(edited);
+//             }
+//         }
+//     );
+// });
+
+// Delete One
+// Clear the DB ??
